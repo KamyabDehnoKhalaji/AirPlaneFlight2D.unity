@@ -13,26 +13,81 @@ public class Fly : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    
+    
+    private float UP_Force = 4;
+    private float rotationSpeed = 10;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        
+        rb.isKinematic = true;
+
+        
     }
 
-    public void Tap()
+    private float jump = 0;
+
+    public void Tap(){
+
+        //jump = 0.2f;
+        rb.velocity = Vector2.up * UP_Force;
+
+        
+        
+        
+        // Vector2 jumpVelo = new Vector3(rb.velocity.x, UP_Force);
+        // rb.velocity = jumpVelo;
+        
+       // rb.AddForce(jumpDirection , ForceMode2D.Impulse);
+        
+        
+        // CancelInvoke("DownRotation");
+        //
+        // transform.rotation = UpRot.transform.rotation;
+        //
+        // rb.velocity = Vector2.up * velocity;
+        //
+        // Invoke("DownRotation", fallDelay);
+    }
+
+
+    
+
+    void FixedUpdate(){
+        transform.rotation = Quaternion.Euler(0, 0, rb.velocity.y * rotationSpeed);
+    }
+    
+    
+    
+    void Update()
     {
-        CancelInvoke("DownRotation");
+        
+        if (Menu.started){
+            rb.isKinematic = false;
+        }
 
-        transform.rotation = UpRot.transform.rotation;
 
-        rb.velocity = Vector2.up * velocity;
+        if (jump>0){
 
-        Invoke("DownRotation", fallDelay);
+            //rb.velocity = Vector2.up * UP_Force *Time.deltaTime;
+            
+            rb.AddForce(Vector2.up * UP_Force *Time.deltaTime , ForceMode2D.Impulse);
+
+            
+            jump -= Time.deltaTime;
+        }
+        
     }
-
-    void DownRotation()
-    {
-        transform.rotation = DownRot.transform.rotation;
-    }
+    
+    // void DownRotation()
+    // {
+    //     
+    //     
+    //     
+    //     transform.rotation = DownRot.transform.rotation;
+    // }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

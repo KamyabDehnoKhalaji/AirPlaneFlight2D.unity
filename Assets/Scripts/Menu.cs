@@ -5,9 +5,11 @@ public class Menu : MonoBehaviour
 {
     public GameObject Player, Button1, Button2, bestText, scoreText;
 
-    void Start()
-    {
-        Time.timeScale = 0f;
+
+    public static bool started;
+    void Start(){
+        started = false;
+        //Time.timeScale = 0f;
     }
 
     public void StartGame()
@@ -17,11 +19,13 @@ public class Menu : MonoBehaviour
         Destroy(Button2);
         Destroy(bestText);
         scoreText.SetActive(true);
-        Time.timeScale = 1f;
+        //Time.timeScale = 1f;
+        started = true;
     }
 
     public void Restart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadSceneAsync(0);
     }
 
