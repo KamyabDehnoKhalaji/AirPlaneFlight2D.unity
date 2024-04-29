@@ -31,25 +31,7 @@ public class Fly : MonoBehaviour
 
     public void Tap(){
 
-        //jump = 0.2f;
         rb.velocity = Vector2.up * UP_Force;
-
-        
-        
-        
-        // Vector2 jumpVelo = new Vector3(rb.velocity.x, UP_Force);
-        // rb.velocity = jumpVelo;
-        
-       // rb.AddForce(jumpDirection , ForceMode2D.Impulse);
-        
-        
-        // CancelInvoke("DownRotation");
-        //
-        // transform.rotation = UpRot.transform.rotation;
-        //
-        // rb.velocity = Vector2.up * velocity;
-        //
-        // Invoke("DownRotation", fallDelay);
     }
 
 
