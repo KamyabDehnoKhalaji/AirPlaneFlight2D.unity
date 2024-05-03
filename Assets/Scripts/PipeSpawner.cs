@@ -10,7 +10,7 @@ public class PipeSpawner : MonoBehaviour
 
     void Start()
     {
-        //SpawnPipe();
+        
     }
 
     private void Update()

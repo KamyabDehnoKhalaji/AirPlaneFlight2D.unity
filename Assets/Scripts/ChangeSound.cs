@@ -14,13 +14,12 @@ public class ChangeSound : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
     void Start()
     {
         soundOnImage = button.image.sprite;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
