@@ -1474,8 +1474,9 @@ GameObject:
   - component: {fileID: 553941762}
   - component: {fileID: 553941761}
   - component: {fileID: 553941760}
+  - component: {fileID: 553941763}
   m_Layer: 0
-  m_Name: Ground (1)
+  m_Name: Ceil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1593,6 +1594,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0.014, y: -0.24, z: -180.041}
+--- !u!114 &553941763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553941758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3309489d7e34514099f625492fa61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ground: {fileID: 688090421}
+  ceiling: {fileID: 553941762}
 --- !u!1 &589064640
 GameObject:
   m_ObjectHideFlags: 0
