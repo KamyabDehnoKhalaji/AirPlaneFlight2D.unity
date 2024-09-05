@@ -7,9 +7,10 @@ public class Menu : MonoBehaviour
 
 
     public static bool started;
-    void Start(){
+    void Start()
+    {
         started = false;
-        
+
     }
 
     public void StartGame()
@@ -19,7 +20,7 @@ public class Menu : MonoBehaviour
         Destroy(Button2);
         Destroy(bestText);
         scoreText.SetActive(true);
-        
+
         started = true;
     }
 
@@ -28,9 +29,6 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadSceneAsync(0);
     }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }
+
+   
