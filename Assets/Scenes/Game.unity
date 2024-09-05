@@ -2157,6 +2157,7 @@ GameObject:
   - component: {fileID: 992012728}
   - component: {fileID: 992012727}
   - component: {fileID: 992012726}
+  - component: {fileID: 992012729}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -2180,8 +2181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 353, y: 213}
-  m_SizeDelta: {x: 499.7131, y: 230.3353}
+  m_AnchoredPosition: {x: 353, y: 327.64343}
+  m_SizeDelta: {x: 499.7131, y: 459.6224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992012726
 MonoBehaviour:
@@ -2227,9 +2228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 992598424}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 992012729}
+        m_TargetAssemblyTypeName: BACK, Assembly-CSharp
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2259,7 +2260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8960cb148cf35ed409edae2413ee08ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45a32feb7febc3d428dd20fe4aefe1c9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2277,6 +2278,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992012724}
   m_CullTransparentMesh: 1
+--- !u!114 &992012729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992012724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c40d613295000a4bae15ac3163f42d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &992598419
 GameObject:
   m_ObjectHideFlags: 0
